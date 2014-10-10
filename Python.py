@@ -1,3 +1,4 @@
+
 '''def US(n, n2):
     if n == 10: return 1
     if n == 0: return 0
@@ -22,7 +23,7 @@ while T > 0:
         N = a
     print a
     T -= 1'''
-
+'''
 a, b, c = 0, 0, 0
 while True:
     c += 1
@@ -41,4 +42,18 @@ while True:
         if x + 1 > a and x + 1 < b and x + 1 == s:
             c2 += 1
         i += 1
-    print "Case {0}: {1}".format(c, c2)
+    print "Case {0}: {1}".format(c, c2)'''
+import math
+def M(a, b):
+    s = 0
+    for i in range(a, b + 1):
+        n = math.log(math.sqrt(i), 2)
+        s += math.pow(2, math.floor(n))
+    return int(s)
+
+t = int(raw_input())
+for i in range(0, t):
+    ipt = raw_input()
+    spt = ipt.split(' ')
+    a, b = int(spt[0]), int(spt[1])
+    print M(a, b)
